@@ -3,7 +3,7 @@ class GolangciLint < Formula
   homepage "https://golangci.com"
   url "https://github.com/golangci/golangci-lint/releases/download/v1.10.2/golangci-lint-1.10.2-darwin-amd64.tar.gz"
   version "1.10.2"
-  sha256 "1fb0ce5b71bcfd5fb4da2553c4d070f3d73e202ddfd59fc836379a2e58032b37"
+  sha256 "28fd477261e956412fb9aeab12f159ed370041863658f4f481ef84b7e440d940"
 
   def install
     bin.install "golangci-lint"
