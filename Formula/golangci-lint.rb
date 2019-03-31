@@ -2,9 +2,9 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  url "https://github.com/golangci/golangci-lint/releases/download/v1.15.0/golangci-lint-1.15.0-darwin-amd64.tar.gz"
-  version "1.15.0"
-  sha256 "083941efa692bfe3c29ba709964e9fe5896889316d51813e523157c96c3153e0"
+  url "https://github.com/golangci/golangci-lint/releases/download/v1.16.0/golangci-lint-1.16.0-darwin-amd64.tar.gz"
+  version "1.16.0"
+  sha256 "76c2498e79770b55bc04a0ea99aa907f96747401343546172bea72b9d9ae85d1"
 
   def install
     bin.install "golangci-lint"
