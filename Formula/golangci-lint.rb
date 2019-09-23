@@ -6,12 +6,12 @@ class GolangciLint < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/golangci/golangci-lint/releases/download/v1.18.0/golangci-lint-1.18.0-darwin-amd64.tar.gz"
-    sha256 "37402c4606de3bc0116c9fc4d1ce18f2e90f55069ece1fa20f1b1622e0b54da3"
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.19.0/golangci-lint-1.19.0-darwin-amd64.tar.gz"
+    sha256 "058d636a30028fdea838e94402072e23dc1225bbbfd4041328105e14deda4089"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.18.0/golangci-lint-1.18.0-linux-amd64.tar.gz"
-      sha256 "0ef2c502035d5f12d6d3a30a7c4469cfcae4dd3828d15fbbfb799c8331cd51c4"
+      url "https://github.com/golangci/golangci-lint/releases/download/v1.19.0/golangci-lint-1.19.0-linux-amd64.tar.gz"
+      sha256 "786e2d0416d42cb48674527b88eb4cab968de9598720f0c686e218a354147f45"
     end
   end
 
