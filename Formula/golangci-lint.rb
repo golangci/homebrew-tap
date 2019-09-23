@@ -2,7 +2,7 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  version "1.18.0"
+  version "1.19.0"
   bottle :unneeded
 
   if OS.mac?
