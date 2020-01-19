@@ -2,24 +2,24 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  version "1.22.2"
+  version "1.23.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/golangci/golangci-lint/releases/download/v1.22.2/golangci-lint-1.22.2-darwin-amd64.tar.gz"
-    sha256 "fcf80824c21567eb0871055711bf9bdca91cf9a081122e2a45f1d11fed754600"
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.23.0/golangci-lint-1.23.0-darwin-amd64.tar.gz"
+    sha256 "7b3d2acdda2790955e0b17f065ade01fea98c34e036600465ff855b7738bd235"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.22.2/golangci-lint-1.22.2-linux-amd64.tar.gz"
-      sha256 "109d38cdc89f271392f5a138d6782657157f9f496fd4801956efa2d0428e0cbe"
+      url "https://github.com/golangci/golangci-lint/releases/download/v1.23.0/golangci-lint-1.23.0-linux-amd64.tar.gz"
+      sha256 "38fc818129b8f0d17cb634ff73f3eb071f3a0ea68b5b433345afcbbd2ef47508"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.22.2/golangci-lint-1.22.2-linux-arm64.tar.gz"
-        sha256 "7ee29f35c74fab017a454237990c74d984ce3855960f2c10509238992bb781f9"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.23.0/golangci-lint-1.23.0-linux-arm64.tar.gz"
+        sha256 "40ab54cdffa3bbf02ac28e8263dcfae602407eca2fb9730c2479a11b94278dbf"
       else
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.22.2/golangci-lint-1.22.2-linux-armv6.tar.gz"
-        sha256 "f08aae4868d4828c8f07deb0dcd941a1da695b97e58d15e9f3d1d07dcc7a0c84"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.23.0/golangci-lint-1.23.0-linux-armv6.tar.gz"
+        sha256 "fccea0af13a4fb970b817d04c927cddd9f3b2b9cb3663727b1166db40c3c5623"
       end
     end
   end
@@ -28,6 +28,8 @@ class GolangciLint < Formula
     bin.install "golangci-lint"
     output = Utils.popen_read("#{bin}/golangci-lint completion bash")
     (bash_completion/"golangci-lint").write output
+    output = Utils.popen_read("#{bin}/golangci-lint completion zsh")
+    (zsh_completion/"_golangci-lint").write output
     prefix.install_metafiles
   end
 
