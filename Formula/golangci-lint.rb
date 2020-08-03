@@ -2,24 +2,24 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  version "1.29.0"
+  version "1.30.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/golangci/golangci-lint/releases/download/v1.29.0/golangci-lint-1.29.0-darwin-amd64.tar.gz"
-    sha256 "6a7c31abca3f51714e5ea1f0aae5dc78d72e7d57d07f02b1a1778219d5648e21"
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.30.0/golangci-lint-1.30.0-darwin-amd64.tar.gz"
+    sha256 "258e51decfe286e2f3b985ef2eece6197dc61f1e50bc1ca4986d23776a673737"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.29.0/golangci-lint-1.29.0-linux-amd64.tar.gz"
-      sha256 "98b1eb7c74766079e1deebc3388c13db9bfa9fa0769046d786cf8d1553d7d68b"
+      url "https://github.com/golangci/golangci-lint/releases/download/v1.30.0/golangci-lint-1.30.0-linux-amd64.tar.gz"
+      sha256 "c8e8fc5753e74d2eb489ad428dbce219eb9907799a57c02bcd8b80b4b98c60d4"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.29.0/golangci-lint-1.29.0-linux-arm64.tar.gz"
-        sha256 "a795d8d119a475d40f1966d2f9c9b3f6a7aa6ed009777ba3bef2804d79fbfcb9"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.30.0/golangci-lint-1.30.0-linux-arm64.tar.gz"
+        sha256 "a9c1d14d84a687fb8e67c2c613533ec3e2802b5baf95ca82ad528f788cb6d61f"
       else
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.29.0/golangci-lint-1.29.0-linux-armv6.tar.gz"
-        sha256 "75c746bab4f674f10aa4a9318df61f4e1d20a3bc9c386e8eb98c2b85e0c09faa"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.30.0/golangci-lint-1.30.0-linux-armv6.tar.gz"
+        sha256 "669ef3611963b44dc5b6cbf3709b5dd56c9d1dab11562309a5cdefcf4096eed0"
       end
     end
   end
