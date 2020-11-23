@@ -2,26 +2,24 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  version "1.32.2"
+  version "1.33.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/golangci/golangci-lint/releases/download/v1.32.2/golangci-lint-1.32.2-darwin-amd64.tar.gz"
-    sha256 "a86bd2fc10bfcd183c7368aa2cfd047a341be11e0bef242a6ed181d4f7dc0fb0"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.32.2/golangci-lint-1.32.2-linux-amd64.tar.gz"
-      sha256 "e7ab86d833bf9faed39801ab3b5cd294f026d26f9a7da63a42390943ead486cc"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.32.2/golangci-lint-1.32.2-linux-arm64.tar.gz"
-        sha256 "800093c347fb2800c7fadb51be81cfcf1f083da8b47882177b3eea80e48bca26"
-      else
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.32.2/golangci-lint-1.32.2-linux-armv6.tar.gz"
-        sha256 "ece429d0e1b53581421bab06bface3ad19a8977b580107ebce05b52747fbd506"
-      end
-    end
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.33.0/golangci-lint-1.33.0-darwin-amd64.tar.gz"
+    sha256 "fa80509612c2058ca0252647718d1a9b43c0ea19cac30440e7944302cb61ec33"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.33.0/golangci-lint-1.33.0-linux-amd64.tar.gz"
+    sha256 "e2d6082f1df53c5d2c280765000f9e82783ea909ba419c6c4e172936b076031e"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.33.0/golangci-lint-1.33.0-linux-armv6.tar.gz"
+    sha256 "a0244622da733c0441df22378c58dc42a9ea9cb1a93f5511deffba33b4966b79"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/golangci/golangci-lint/releases/download/v1.33.0/golangci-lint-1.33.0-linux-arm64.tar.gz"
+    sha256 "3a3358960abd50e509df043e8dcd0367441cbecea8516eec7ef2cf6a7eddd8d5"
   end
 
   def install
