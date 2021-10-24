@@ -6,7 +6,6 @@ class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
   version "1.42.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
