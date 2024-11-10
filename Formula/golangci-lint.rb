@@ -5,12 +5,12 @@
 class GolangciLint < Formula
   desc "Fast linters runner for Go."
   homepage "https://golangci.com"
-  version "1.61.0"
+  version "1.62.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.61.0/golangci-lint-1.61.0-darwin-amd64.tar.gz"
-      sha256 "5c280ef3284f80c54fd90d73dc39ca276953949da1db03eb9dd0fbf868cc6e55"
+      url "https://github.com/golangci/golangci-lint/releases/download/v1.62.0/golangci-lint-1.62.0-darwin-amd64.tar.gz"
+      sha256 "0ed6f1a216ddb62e293858196799608d63894bd2ec178114484363ca45cde84b"
 
       def install
         bin.install "golangci-lint"
@@ -24,8 +24,8 @@ class GolangciLint < Formula
       end
     end
     on_arm do
-      url "https://github.com/golangci/golangci-lint/releases/download/v1.61.0/golangci-lint-1.61.0-darwin-arm64.tar.gz"
-      sha256 "544334890701e4e04a6e574bc010bea8945205c08c44cced73745a6378012d36"
+      url "https://github.com/golangci/golangci-lint/releases/download/v1.62.0/golangci-lint-1.62.0-darwin-arm64.tar.gz"
+      sha256 "dde51958f0f24d442062b5709b6912d91e235115dfe5887e80b3e5602c9cc09b"
 
       def install
         bin.install "golangci-lint"
@@ -43,8 +43,8 @@ class GolangciLint < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.61.0/golangci-lint-1.61.0-linux-amd64.tar.gz"
-        sha256 "77cb0af99379d9a21d5dc8c38364d060e864a01bd2f3e30b5e8cc550c3a54111"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.62.0/golangci-lint-1.62.0-linux-amd64.tar.gz"
+        sha256 "53695531eeb824b6883c703335cef6f07882f8ba6fedc00ed43853ea07fa1fbd"
 
         def install
           bin.install "golangci-lint"
@@ -60,8 +60,8 @@ class GolangciLint < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.61.0/golangci-lint-1.61.0-linux-armv6.tar.gz"
-        sha256 "1f307f2fcc5d7d674062a967a0d83a7091e300529aa237ec6ad2b3dd14c897f5"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.62.0/golangci-lint-1.62.0-linux-armv6.tar.gz"
+        sha256 "0a6565ed98da60b470f5652eb1bf434ae84f39ab0632749398176e1a9c477798"
 
         def install
           bin.install "golangci-lint"
@@ -77,8 +77,8 @@ class GolangciLint < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/golangci/golangci-lint/releases/download/v1.61.0/golangci-lint-1.61.0-linux-arm64.tar.gz"
-        sha256 "af60ac05566d9351615cb31b4cc070185c25bf8cbd9b09c1873aa5ec6f3cc17e"
+        url "https://github.com/golangci/golangci-lint/releases/download/v1.62.0/golangci-lint-1.62.0-linux-arm64.tar.gz"
+        sha256 "e1e47209d7bdd288fd8cfe88548b477df2f7eca81b0e9ec1f9d45604f79185eb"
 
         def install
           bin.install "golangci-lint"
